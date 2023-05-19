@@ -4,7 +4,7 @@ const MONGODB_URI = process.env.MONGODB_URI; // eslint-disable-line
 
 let mongodbClient;
 
-const mongodb = async () => {
+const mongodb = await () => {
   if (!mongodbClient) {
     mongodbClient = mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
